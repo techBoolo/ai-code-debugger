@@ -1,12 +1,13 @@
 # AI Code Debugger
 
-A powerful, interactive CLI tool designed to help you debug code faster using local LLMs. Built with [LangChain](https://python.langchain.com/), [Ollama](https://ollama.com/), and [Rich](https://github.com/Textualize/rich).
+A powerful, dual-interface (CLI & Web) tool designed to help you debug code faster using local LLMs. Built with [LangChain](https://python.langchain.com/), [Ollama](https://ollama.com/), [Streamlit](https://streamlit.io/), and [Rich](https://github.com/Textualize/rich).
 
 ![Debugger Demo](https://placehold.co/800x400?text=AI+Code+Debugger+CLI)
 
 ## Features
 
 - **🔎 Interactive Debugging**: Paste your code and error message to get instant analysis and fixes.
+- **🖥️ Dual Interface**: Choose between a Terminal-based CLI or a modern Web Dashboard.
 - **💬 Conversational Sessions**: Ask follow-up questions to refine the solution without restarting context.
 - **🎨 Rich UI**: Beautiful terminal output with Markdown rendering and syntax highlighting.
 - **⌨️ Smart Input**: Multi-line input support (Paste friendly).
@@ -38,7 +39,7 @@ A powerful, interactive CLI tool designed to help you debug code faster using lo
 
    *Alternatively, using standard pip:*
    ```bash
-   pip install langchain langchain-ollama python-dotenv prompt_toolkit rich
+   pip install langchain langchain-ollama python-dotenv prompt_toolkit rich streamlit watchdog
    ```
 
 3. **Configure Environment:**
@@ -70,4 +71,18 @@ A powerful, interactive CLI tool designed to help you debug code faster using lo
 | **Submit** | `Enter` |
 | **New Line** | `Esc` + `Enter` |
 | **Exit** | `Ctrl+C` |
+
+## Web Interface
+
+Prefer a graphical interface? Launch the Streamlit app:
+
+1. **Start the Web App:**
+   ```bash
+   uv run streamlit run app.py
+   ```
+
+2. **Features:**
+   - 🎨 Modern, dark-mode UI.
+   - ⚙️ Sidebar for Model (e.g., `llama3`) and System Persona configuration.
+   - 💾 Persistent chat history during the session.
 
